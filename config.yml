@@ -1,0 +1,24 @@
+storage:
+  log_directory: "/var/logs/myapp"
+  max_segment_size: 100MB
+  retention_policy: "7d"  # Retenção de 7 dias
+
+logging:
+  default_level: "INFO"
+  enabled_levels:
+    - "ENTRY"
+    - "INFO"
+    - "WARN"
+    - "ERROR"
+    - "FATAL"
+    - "DEBUG"
+    - "TRACE"
+
+security:
+  enable_hmac: true
+  hmac_key: "sua_chave_secreta"
+  enable_signature: true
+  signature_algorithm: "SHA256"
+
+environment:
+  name: "production"
