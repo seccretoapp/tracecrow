@@ -6,14 +6,14 @@ import (
 )
 
 type Division struct {
-	ID   uuid.UUID
+	ID   string
 	Name string
 }
 
 // NewDivision cria uma nova divisão com o nome fornecido.
 func NewDivision(name string) Division {
 	return Division{
-		ID:   uuid.New(),
+		ID:   uuid.New().String(),
 		Name: name,
 	}
 }
@@ -41,7 +41,7 @@ func (d *Division) UpdateName(newName string) error {
 }
 
 // GetID retorna o ID da divisão.
-func (d Division) GetID() uuid.UUID {
+func (d Division) GetID() string {
 	return d.ID
 }
 

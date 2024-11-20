@@ -6,14 +6,14 @@ import (
 )
 
 type Channel struct {
-	ID   uuid.UUID
+	ID   string
 	Name string
 }
 
 // NewChannel cria um novo canal com o nome fornecido.
 func NewChannel(name string) Channel {
 	return Channel{
-		ID:   uuid.New(),
+		ID:   uuid.New().String(),
 		Name: name,
 	}
 }
@@ -41,7 +41,7 @@ func (c *Channel) UpdateName(newName string) error {
 }
 
 // GetID retorna o ID do canal.
-func (c Channel) GetID() uuid.UUID {
+func (c Channel) GetID() string {
 	return c.ID
 }
 

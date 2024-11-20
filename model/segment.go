@@ -2,12 +2,11 @@ package model
 
 import (
 	"fmt"
-	"github.com/google/uuid"
 )
 
 type Segment struct {
-	Channel  uuid.UUID
-	Division uuid.UUID
+	Channel  string
+	Division string
 	Offset   int64
 }
 
